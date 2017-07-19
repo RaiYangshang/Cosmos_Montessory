@@ -2,7 +2,7 @@
 <html>
   <head>
          <title>Montessori Management System</title>
-	     <center><img src="Start1.jpg" height="250"><center>
+	     <center><img src="img/Start1.jpg" height="250"><center>
          <link rel="shortcut icon" href="Start1.jpg" />
 </head>
 <body bgcolor="F3CE64">
@@ -10,21 +10,20 @@
         <ul id="menu">
 			<h1>
 			<center>
-			<a href="1st.php">Home</a>|
+			<a href="index.php">Home</a>|
 			<a href="about.php">About Us</a>|
 			<a href="program.php">Our Programs</a>|
 			<a href="photo.php">Photo Gallary</a>|
 			<a href="contact.php">Contact Us</a>|
+			<a href="signin.php">Login</a>|
+			
 			</h1>
 	    </ul>
 	   </div>
+	   
 	   <div class="main_page">
 	      <form action="signup.php" method="post">
-             <table width="350px" border="0px" align="right">
-               <tr>
-	              <td>User Registration Form</td>
-	           </tr>
-             </table>
+		        <right><h2>User Registration Form</h2></right>
              <table width="350px" border="0px" align="center">
 	           <tr>
 	             <td>Name:</td>
@@ -57,11 +56,8 @@
 	           <tr>
 	              <td></td>
 	              <td><input type="submit" value="Sign Up" name="signup"></td>
-	           </tr>
-	           <tr>
-	              <td></td>
-	              <td><input type="submit" value="Sign In" name="signin"></td>
-	           </tr>
+				  <td></td>
+	           </tr>          
            </table>
        </form>
 	   </div>
@@ -75,23 +71,22 @@
 </html>
 
 <?php 
-  include("include/database.php");
+  include("action/database.php");
   if(isset($_POST["signup"])){
-	  $fname=$_POST['fname'];
-	  $username=$_POST['username'];
-	  $email=$_POST['email'];
-	  $password=$_POST['password'];
-	  $address=$_POST['address'];
-	  $phoneno=$_POST['phoneno'];
-	  $occupation=$_POST['occupation'];
-	  $gender=$_POST['gender'];
-	  #$date=date("d/m/y");
-	  $sql="INSERT INTO registration(fname,username,email,password,address,phoneno,occupation,gender,date) VALUES('$fname','$username','$email','$password','$address','$phoneno','$occupation','$gender',NOW())";
+	  $Name=$_POST['fname'];  
+	  $UserName=$_POST['username'];  
+	  $Email=$_POST['email'];    
+	  $Password=$_POST['password'];
+	  $Gender=$_POST['gender'];
+	  $Address=$_POST['address'];
+	  $PhoneNo=$_POST['phoneno'];
+	  
+	  $sql="INSERT INTO registration(name,username,email,password,gender,address,phoneno) VALUES('$Name','$UserName','$Email','$Password','$Gender','$Address','$PhoneNo')";
 	  $result=mysqli_query($con,$sql);
 	  if($result){
-		  echo "<script>alert('Successfull');</script>";
+		  echo "<script>alert(' Registration Successful');</script>";
 	  }else{
-		  echo "<script>alert('Retry');</script>";
+		  echo "<script>alert('Registration unsuccessful. Something went wrong');</script>";
 	  }
   }
 ?>

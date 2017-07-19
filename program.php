@@ -1,15 +1,15 @@
-<!doctype html>
+﻿10:27 PM 7/11/2017<!doctype html>
 <html>
 <head>
     <title>Montessori Management System</title>
-	     <center><img src="Start1.jpg" height="250"><center>
+	     <center><img src="img/Start1.jpg" height="250"><center>
        <link rel="shortcut icon" href="Start1.jpg" />
 </head>
 <body bgcolor="E56CCF"> 
         <ul id="menu">
 			<h1>
 			<center>
-			<a href="1st.php">Home</a>|
+			<a href="index.php">Home</a>|
 			<a href="about.php">About Us</a>|
 			<a href="program.php">Our Programs</a>|
 			<a href="photo.php">Photo Gallary</a>|

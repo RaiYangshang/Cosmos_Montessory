@@ -5,7 +5,7 @@
 	     <center><img src="img/Start1.jpg" height="250"><center>
        <link rel="shortcut icon" href="Start1.jpg" />
 </head>
-<body bgcolor="7B6CE">
+<body bgcolor="33EE77">
         <ul id="menu">
 			<h1>
 			<center>
@@ -14,10 +14,13 @@
 			<a href="program.php">Our Programs</a>|
 			<a href="photo.php">Photo Gallary</a>|
 			<a href="contact.php">Contact Us</a>|
-			<center><img src="img/contactwelcome1.jpg" height="550"><center>
+			<a href="signup.php">Registration</a>|
+			<a href="signin.php">Login</a>|
+	
+			<center>
 			</h1>
+			<center><img src="img/firstpic.jpg" height="750"><center>
 	    </ul>
-		 
 		
 		<div id="footer">
 			<div>
@@ -26,3 +29,6 @@
 		</div>
 </body>
 </html>
+<?php 
+	include("setup.php");
+ ?>
